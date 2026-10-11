@@ -1,0 +1,463 @@
+{
+  "id": "EU-DPP-2026-BAT-VOLTRA-500-8492",
+  "name": "Voltra Range 500",
+  "category": "L-Category E-Bike Lithium-ion Traction Battery",
+  "manufacturer": {
+    "name": "Voltra Technologies GmbH",
+    "location": "Stuttgart, Germany",
+    "registrationNumber": "HRB 784921",
+    "facility": "Wrocław Pack Assembly Hub, Poland",
+    "contact": "passport-support@voltra-mobility.eu",
+    "website": "https://voltra-mobility.eu"
+  },
+  "compliance": {
+    "regulation": "EU Battery Regulation (EU) 2023/1542",
+    "standard": "EN 50604-1:2016 / IEC 62133-2:2017",
+    "ceCertified": true,
+    "unTransportationTest": "UN 38.3 Rev. 7 Passed",
+    "rohsCompliant": true
+  },
+  "specifications": {
+    "voltageNominal": "36.0 V",
+    "voltageMax": "42.0 V",
+    "capacityRated": "13.8 Ah",
+    "energyNominal": "496.8 Wh",
+    "cellChemistry": "Li-ion NMC 18650 (Lithium Nickel Manganese Cobalt)",
+    "cellCount": "40 Cells (10S4P Configuration)",
+    "weight": "2.85 kg",
+    "dimensions": "375 × 82 × 65 mm",
+    "ingressProtection": "IP67 (Dust tight & submersible to 1m for 30 min)",
+    "manufactureDate": "2026-02-12",
+    "batchNumber": "BATCH-2026-07-WRO",
+    "expectedLifetime": "1,200 full charge cycles (≥80% capacity retention)",
+    "estimatedCalendarLife": "8 to 10 years (under standard storage conditions)",
+    "warrantyPeriod": "36 months or 750 cycles"
+  },
+  "sustainability": {
+    "overallScore": 84,
+    "scoreScale": 100,
+    "carbonFootprintKgPerKwh": 34.2,
+    "carbonFootprintTotalKg": 17.0,
+    "recycledContentPercentage": 24.5,
+    "repairabilityIndex": 8.2,
+    "recyclabilityRate": 95.0,
+    "subScores": [
+      {
+        "id": "carbon",
+        "score": 88,
+        "label": "Carbon Footprint",
+        "value": "34.2 kg CO₂e / kWh",
+        "benchmark": "42% lower than 2024 EU industry average (59 kg)",
+        "source": "TÜV Rheinland ISO 14067 Life Cycle Assessment (LCA) Audit",
+        "sourceDate": "2026-01-14"
+      },
+      {
+        "id": "recycled",
+        "score": 76,
+        "label": "Recycled Material Share",
+        "value": "24.5% overall weight",
+        "benchmark": "Exceeds EU 2031 mandatory threshold (16% Co, 6% Li, 6% Ni)",
+        "source": "Bureau Veritas Circularity Declaration EN 45557",
+        "sourceDate": "2026-02-02"
+      },
+      {
+        "id": "durability",
+        "score": 91,
+        "label": "Durability & Cell Longevity",
+        "value": "1,200 cycles to 80% SoH",
+        "benchmark": "Tested at 1C charge / 1C discharge rate at 25°C",
+        "source": "VDE Testing and Certification Institute IEC 62133-2 Test Report",
+        "sourceDate": "2025-11-20"
+      },
+      {
+        "id": "repairability",
+        "score": 82,
+        "label": "Modular Repairability Index",
+        "value": "8.2 / 10 European Standard",
+        "benchmark": "Fasteners removable with standard Torx tools; no glued housing",
+        "source": "ADEME / EU Eco-Design Repairability Framework Evaluation",
+        "sourceDate": "2026-01-18"
+      },
+      {
+        "id": "recyclability",
+        "score": 85,
+        "label": "End-of-Life Material Recovery",
+        "value": "95.0% closed-loop efficiency",
+        "benchmark": "Hydrometallurgical pilot recovery pathway validated in EU",
+        "source": "Fraunhofer Institute for Systems and Innovation Research (ISI)",
+        "sourceDate": "2026-01-28"
+      }
+    ]
+  },
+  "materials": [
+    {
+      "name": "Nickel (Ni)",
+      "percentage": 32.0,
+      "recycledShare": 18.0,
+      "purpose": "Cathode active material for high energy density",
+      "origin": "Terrafame Mine & Refinery, Sotkamo, Finland",
+      "criticalRawMaterial": true,
+      "source": "Supplier Material Declaration (Full Material Disclosure FMD-2026)",
+      "sourceDate": "2026-01-20"
+    },
+    {
+      "name": "Aluminum (Al)",
+      "percentage": 24.0,
+      "recycledShare": 62.0,
+      "purpose": "Structural casing, heat dissipation fins, and internal busbars",
+      "origin": "Hydro Extrusions, Karmøy, Norway (Low-carbon hydro powered)",
+      "criticalRawMaterial": false,
+      "source": "ASI (Aluminium Stewardship Initiative) Chain of Custody Certificate",
+      "sourceDate": "2026-01-25"
+    },
+    {
+      "name": "Cobalt (Co)",
+      "percentage": 14.0,
+      "recycledShare": 22.0,
+      "purpose": "Cathode thermal stability and cycle life retention",
+      "origin": "Freeport Cobalt Refinery, Kokkola, Finland (OECD Due Diligence audited)",
+      "criticalRawMaterial": true,
+      "source": "RMI (Responsible Minerals Initiative) Conflict-Free Smelter Audit",
+      "sourceDate": "2025-12-10"
+    },
+    {
+      "name": "Manganese (Mn)",
+      "percentage": 12.0,
+      "recycledShare": 15.0,
+      "purpose": "Cathode structural integrity and cost reduction",
+      "origin": "Euro Manganese Chvaletice Facility, Czech Republic",
+      "criticalRawMaterial": true,
+      "source": "EU Critical Raw Materials Traceability Audit",
+      "sourceDate": "2026-01-08"
+    },
+    {
+      "name": "Lithium (Li)",
+      "percentage": 9.0,
+      "recycledShare": 12.0,
+      "purpose": "Ion carrier across electrolyte for battery chemistry",
+      "origin": "Albemarle Salar de Atacama, Chile (IRMA 75 Certified Sustainable Water)",
+      "criticalRawMaterial": true,
+      "source": "IRMA Responsible Mining Audit Report IRMA-2025-CL",
+      "sourceDate": "2025-11-15"
+    },
+    {
+      "name": "Copper (Cu)",
+      "percentage": 6.0,
+      "recycledShare": 45.0,
+      "purpose": "Anode current collector foil and power terminal leads",
+      "origin": "KGHM Polska Miedź, Lubin, Poland",
+      "criticalRawMaterial": false,
+      "source": "The Copper Mark Responsible Production Verification",
+      "sourceDate": "2026-01-12"
+    },
+    {
+      "name": "Electrolyte & Polymer Separators",
+      "percentage": 3.0,
+      "recycledShare": 0.0,
+      "purpose": "LiPF6 in carbonate solvent and ceramic-coated polyethylene separator",
+      "origin": "Solvay Specialty Polymers, Tavaux, France",
+      "criticalRawMaterial": false,
+      "source": "REACH Annex XVII Hazardous Substance Compliance Dossier",
+      "sourceDate": "2026-02-01"
+    }
+  ],
+  "supplyChain": [
+    {
+      "step": 1,
+      "title": "Raw Mineral Extraction",
+      "location": "Atacama (Chile), Sotkamo (Finland), Lubin (Poland)",
+      "operator": "Albemarle, Terrafame, KGHM",
+      "date": "2025-06-15",
+      "certifications": ["IRMA Standard 75", "The Copper Mark", "ISO 14001"],
+      "description": "Responsible mining with independent environmental groundwater monitoring and zero child labor certification.",
+      "source": "OECD Due Diligence Guidance Audit Tier-3 Report",
+      "sourceDate": "2025-07-01"
+    },
+    {
+      "step": 2,
+      "title": "Chemical Precursor & Cathode Refining",
+      "location": "Kokkola & Harjavalta, Finland",
+      "operator": "BASF Battery Materials & Freeport Cobalt",
+      "date": "2025-09-20",
+      "certifications": ["100% Renewable Hydro Grid", "Responsible Minerals Initiative (RMI)"],
+      "description": "Conversion into high-purity battery grade NMC precursor using fossil-free Nordic hydroelectric energy.",
+      "source": "Finnish Environmental Institute (SYKE) Verification",
+      "sourceDate": "2025-10-05"
+    },
+    {
+      "step": 3,
+      "title": "Cell Fabrication & Testing",
+      "location": "Wrocław Innovation Park, Poland",
+      "operator": "Northvolt Poland Cell Division",
+      "date": "2025-11-28",
+      "certifications": ["ISO 9001:2015", "IATF 16949 Automotive Standard", "CE Safety Test"],
+      "description": "Precision winding, electrolyte filling, formation cycling, and 100% X-ray inspection of cell internals.",
+      "source": "Northvolt Quality Assurance Lot 2025-WRO-44",
+      "sourceDate": "2025-12-04"
+    },
+    {
+      "step": 4,
+      "title": "Pack Integration & Smart BMS Assembly",
+      "location": "Stuttgart Industrial Campus, Germany",
+      "operator": "Voltra Technologies GmbH Facility 02",
+      "date": "2026-02-08",
+      "certifications": ["ISO 14001", "EU DPP Digital Signature Generation", "UN 38.3 Drop Test"],
+      "description": "Modular screw assembly, waterproof seal fitting, laser welding of busbars, and cryptographic passport flashing.",
+      "source": "Final Quality Control End-of-Line Automated Test Bench",
+      "sourceDate": "2026-02-12"
+    },
+    {
+      "step": 5,
+      "title": "Distribution & Green Rail Freight",
+      "location": "European Logistics Corridor (Frankfurt & Paris Hubs)",
+      "operator": "DB Cargo Green Logistics",
+      "date": "2026-02-18",
+      "certifications": ["EcoTransIT Verified Rail Certificate", "Zero Road Haulage Over 500km"],
+      "description": "Electric freight transport to certified dealers and assembly partners across 18 EU member states.",
+      "source": "DB Cargo Zero Carbon Transport Manifest #77391",
+      "sourceDate": "2026-02-20"
+    }
+  ],
+  "repair": {
+    "score": 8.2,
+    "scale": 10,
+    "disassemblyEase": 9.0,
+    "fastenerType": "Standard Torx T15 & T20 (No glued or ultrasonically welded enclosures)",
+    "toolRequirements": "Standard insulated electronics screwdrivers, multimeter, nylon spudger",
+    "bmsDiagnosticsAvailable": "Open Bluetooth Low Energy (BLE) diagnostic profile compliant with EU Open Telemetry",
+    "sparePartsGuaranteedYears": 10,
+    "safetyWarnings": [
+      {
+        "level": "danger",
+        "title": "High Voltage DC Notice",
+        "description": "Nominal 36V can cause severe electrical arc if terminal pins are short-circuited. Always disconnect master fuse before disassembly."
+      },
+      {
+        "level": "warning",
+        "title": "Insulated Tools Required",
+        "description": "Use only VDE 1000V rated insulated hand tools and wear ANSI Z87.1 safety glasses to prevent accidental shorts."
+      },
+      {
+        "level": "info",
+        "title": "Authorized vs. DIY Repairs",
+        "description": "External shell, wiring harness, handle, and fuse replacement are consumer-safe. Cell internal welding must be handled by certified technicians."
+      }
+    ],
+    "guides": [
+      {
+        "id": "guide-shell",
+        "title": "Outer Protective Shell & Handle Replacement",
+        "difficulty": "Easy",
+        "estimatedMinutes": 15,
+        "consumerSafe": true,
+        "tools": ["Torx T20 Driver", "Plastic Pry Tool"],
+        "steps": [
+          "Ensure charging port cover is closed and key lock is set to unlocked position.",
+          "Remove 6× M4 Torx T20 screws from perimeter of the lower aluminum extrusion.",
+          "Gently slide upper protective cover forward to disengage silicone seal channel.",
+          "Swap damaged housing component and align replacement gasket before tightening screws to 1.8 Nm torque."
+        ]
+      },
+      {
+        "id": "guide-fuse",
+        "title": "Main 40A Ceramic Safety Fuse Inspection & Replacement",
+        "difficulty": "Moderate",
+        "estimatedMinutes": 20,
+        "consumerSafe": true,
+        "tools": ["Torx T15 Driver", "Digital Multimeter", "Plastic Tweezers"],
+        "steps": [
+          "Remove top access hatch using Torx T15 driver.",
+          "Measure voltage across output pins with multimeter to verify circuit is discharged.",
+          "Use plastic tweezers to pull 40A ceramic mini-blade fuse from its insulated socket.",
+          "Check continuity. If blown, insert genuine Voltra #VOL-500-FUS-12 fuse and press firmly until seated."
+        ]
+      },
+      {
+        "id": "guide-connector",
+        "title": "IP67 Charging Port & Silicone Gasket Servicing",
+        "difficulty": "Moderate",
+        "estimatedMinutes": 30,
+        "consumerSafe": true,
+        "tools": ["Torx T15 Driver", "Soldering Iron (optional quick-disconnect)", "Clean lint-free cloth"],
+        "steps": [
+          "Unscrew retaining collar on 3-pin XLR/Rosenberger charging port assembly.",
+          "Unclip molex connector linking charging harness to BMS board.",
+          "Clean contact seat with isopropyl alcohol and inspect silicone O-ring for tears.",
+          "Install new connector #VOL-500-GST-09, ensuring key notch faces upward, and secure retaining ring."
+        ]
+      },
+      {
+        "id": "guide-bms",
+        "title": "Smart BMS Logic Board Diagnostic & Reset",
+        "difficulty": "Advanced",
+        "estimatedMinutes": 45,
+        "consumerSafe": false,
+        "tools": ["BLE Diagnostic App", "Multimeter", "ESD Grounding Wrist Strap"],
+        "steps": [
+          "Perform static discharge grounding before touching board surface.",
+          "Connect via open Loop BLE service to read diagnostic trouble codes (DTC).",
+          "If cell balance error persists after firmware reset, check ribbon balance harness pins.",
+          "Replace BMS board #VOL-500-BMS-04 only at an authorized EU service center to preserve battery passport cryptographic chain."
+        ]
+      }
+    ],
+    "spareParts": [
+      {
+        "partNumber": "VOL-500-SHL-01",
+        "name": "Outer Shock-Resistant Shell (Upper & Lower Set)",
+        "priceEur": 42.00,
+        "availability": "In Stock (Ships in 24h)",
+        "warrantyMonths": 24,
+        "weightGrams": 480,
+        "consumerReplaceable": true
+      },
+      {
+        "partNumber": "VOL-500-BMS-04",
+        "name": "Smart Battery Management System (BMS Rev D)",
+        "priceEur": 78.50,
+        "availability": "In Stock (Certified Technicians)",
+        "warrantyMonths": 36,
+        "weightGrams": 110,
+        "consumerReplaceable": false
+      },
+      {
+        "partNumber": "VOL-500-GST-09",
+        "name": "IP67 Weatherproof Connector & Seal Gasket Kit",
+        "priceEur": 16.00,
+        "availability": "In Stock",
+        "warrantyMonths": 24,
+        "weightGrams": 65,
+        "consumerReplaceable": true
+      },
+      {
+        "partNumber": "VOL-500-FUS-12",
+        "name": "40A High-Breaking Ceramic Safety Fuse (Pack of 2)",
+        "priceEur": 4.50,
+        "availability": "In Stock",
+        "warrantyMonths": 12,
+        "weightGrams": 15,
+        "consumerReplaceable": true
+      },
+      {
+        "partNumber": "VOL-500-HAR-03",
+        "name": "Modular Internal Wiring Harness with Dual NTC Thermistors",
+        "priceEur": 22.00,
+        "availability": "In Stock",
+        "warrantyMonths": 24,
+        "weightGrams": 95,
+        "consumerReplaceable": true
+      }
+    ]
+  },
+  "recycling": {
+    "euDirective": "Directive 2006/66/EC and Regulation (EU) 2023/1542",
+    "consumerCost": "Free of charge (Producer Extended Responsibility EOL Funded)",
+    "landfillBan": "Strict EU-wide landfill and incineration ban applies. Never place in household waste.",
+    "recoveryRateTarget": "95% of active metals by 2027",
+    "safetyChecklist": [
+      {
+        "id": "check-damage",
+        "label": "Inspect for mechanical damage",
+        "description": "Check if aluminum casing is dented, cracked, leaking liquid, or swelling. If swollen, place in fire-resistant container."
+      },
+      {
+        "id": "check-tape",
+        "label": "Insulate terminal pins",
+        "description": "Apply non-conductive electrical tape over the 3-pin connector and discharge port to prevent short-circuit sparks."
+      },
+      {
+        "id": "check-dry",
+        "label": "Keep dry and sheltered",
+        "description": "Store at room temperature away from combustible items, rain, or direct sunlight prior to return."
+      },
+      {
+        "id": "check-transport",
+        "label": "Safe personal transport",
+        "description": "Transport battery in trunk or pannier bag in upright position. Do not drop or subject to heavy impacts."
+      }
+    ],
+    "collectionPoints": [
+      {
+        "city": "Berlin, Germany",
+        "name": "BSR Recyclinghof Beusselstraße",
+        "address": "Beusselstraße 44n, 10553 Berlin",
+        "type": "Municipal Circular Yard",
+        "hours": "Mon-Sat 08:00 - 18:00",
+        "cost": "Free",
+        "certified": true
+      },
+      {
+        "city": "Berlin, Germany",
+        "name": "Stadtrad Certified Mobility Hub",
+        "address": "Torstraße 118, 10119 Berlin",
+        "type": "Authorized Retailer Take-Back",
+        "hours": "Mon-Fri 10:00 - 19:00",
+        "cost": "Free",
+        "certified": true
+      },
+      {
+        "city": "Paris, France",
+        "name": "Déchèterie Municipale Porte de Pantin",
+        "address": "5A Rue de la Clôture, 75019 Paris",
+        "type": "Municipal Eco-Centre",
+        "hours": "Mon-Sun 09:00 - 19:00",
+        "cost": "Gratuit",
+        "certified": true
+      },
+      {
+        "city": "Brussels, Belgium",
+        "name": "Recypark Neder-Over-Heembeek",
+        "address": "Rue de Meudon 60, 1120 Bruxelles",
+        "type": "Regional Collection Centre",
+        "hours": "Tue-Sun 09:00 - 17:00",
+        "cost": "Gratuit",
+        "certified": true
+      },
+      {
+        "city": "Vienna, Austria",
+        "name": "MA 48 Mistplatz Heiligenstadt",
+        "address": "Grinzinger Straße 151, 1190 Wien",
+        "type": "Municipal Waste Authority",
+        "hours": "Mon-Sat 07:00 - 18:00",
+        "cost": "Kostenlos",
+        "certified": true
+      },
+      {
+        "city": "Amsterdam, Netherlands",
+        "name": "Gemeente Afvalpunt Rozenburglaan",
+        "address": "Rozenburglaan 1, 1097 HK Amsterdam",
+        "type": "Circular Resource Depot",
+        "hours": "Mon-Sat 08:00 - 17:00",
+        "cost": "Gratis",
+        "certified": true
+      }
+    ],
+    "circularProcess": [
+      {
+        "stage": 1,
+        "title": "Safe Cryogenic Discharge",
+        "description": "Any residual electrochemical charge is neutralized in a non-combustible inert argon chamber."
+      },
+      {
+        "stage": 2,
+        "title": "Mechanical Fractionation",
+        "description": "Shredders separate aluminum casing, copper busbars, and polymer separator film with zero thermal runaway."
+      },
+      {
+        "stage": 3,
+        "title": "Black Mass Extraction",
+        "description": "Cathode and anode coatings are filtered into concentrated high-grade 'black mass' powder."
+      },
+      {
+        "stage": 4,
+        "title": "Hydrometallurgical Refining",
+        "description": "Low-temperature aqueous acid leaching extracts battery-grade lithium carbonate, nickel sulfate, and cobalt."
+      },
+      {
+        "stage": 5,
+        "title": "Closed-Loop Re-Manufacturing",
+        "description": "95%+ of recovered critical metals flow directly back into new European gigafactory cell production lines."
+      }
+    ]
+  }
+}

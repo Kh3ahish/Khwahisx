@@ -1,0 +1,8 @@
+{
+  "name": "KK47",
+  "description": "Loop — EU Digital Product Passport consumer platform. Transparent supply chain, battery lifecycle, repairability, and circular recycling for the Voltra Range 500.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}

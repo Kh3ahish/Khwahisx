@@ -1,0 +1,109 @@
+{
+  "entities": {
+    "ContactMessage": {
+      "title": "Contact Message",
+      "description": "A message submitted via the contact form.",
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string",
+          "maxLength": 100,
+          "description": "The sender's name."
+        },
+        "email": {
+          "type": "string",
+          "format": "email",
+          "description": "The sender's email address."
+        },
+        "message": {
+          "type": "string",
+          "maxLength": 2000,
+          "description": "The message content."
+        },
+        "createdAt": {
+          "type": "string",
+          "format": "date-time",
+          "description": "Timestamp of when the message was sent."
+        },
+        "status": {
+          "type": "string",
+          "enum": ["unread", "read", "archived"],
+          "description": "Status of the message."
+        }
+      },
+      "required": ["name", "email", "message", "createdAt", "status"]
+    },
+    "Admin": {
+      "title": "Admin",
+      "description": "Users with administrative privileges.",
+      "type": "object",
+      "properties": {
+        "email": {
+          "type": "string",
+          "format": "email"
+        },
+        "role": {
+          "type": "string",
+          "enum": ["owner", "editor"]
+        }
+      },
+      "required": ["email", "role"]
+    },
+    "Project": {
+      "title": "Project",
+      "description": "A portfolio project entry.",
+      "type": "object",
+      "properties": {
+        "title": { "type": "string" },
+        "slug": { "type": "string" },
+        "description": { "type": "string" },
+        "thumbnail": { "type": "string" },
+        "tags": { "type": "array", "items": { "type": "string" } },
+        "category": { "type": "string" },
+        "year": { "type": "string" },
+        "client": { "type": "string" },
+        "role": { "type": "string" },
+        "images": { "type": "array", "items": { "type": "string" } },
+        "htmlContent": { "type": "string" },
+        "isPublished": { "type": "boolean" },
+        "rank": { "type": "integer", "default": 0 },
+        "createdAt": { "type": "string", "format": "date-time" },
+        "updatedAt": { "type": "string", "format": "date-time" }
+      },
+      "required": ["title", "slug", "thumbnail", "createdAt", "isPublished"]
+    },
+    "Testimonial": {
+      "title": "Testimonial",
+      "description": "A kind word or LOR from a colleague or client.",
+      "type": "object",
+      "properties": {
+        "name": { "type": "string" },
+        "role": { "type": "string" },
+        "organisation": { "type": "string" },
+        "content": { "type": "string" },
+        "image": { "type": "string" },
+        "isLOR": { "type": "boolean", "default": false },
+        "createdAt": { "type": "string", "format": "date-time" }
+      },
+      "required": ["name", "role", "organisation", "content", "createdAt"]
+    }
+  },
+  "firestore": {
+    "/messages/{messageId}": {
+      "schema": "ContactMessage",
+      "description": "Collection of contact form submissions."
+    },
+    "/admins/{adminId}": {
+      "schema": "Admin",
+      "description": "Whitelist of administrator accounts."
+    },
+    "/projects/{projectId}": {
+      "schema": "Project",
+      "description": "Collection of portfolio projects."
+    },
+    "/testimonials/{testimonialId}": {
+      "schema": "Testimonial",
+      "description": "Collection of testimonials and kind words."
+    }
+  }
+}

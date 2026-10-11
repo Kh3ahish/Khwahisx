@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Cursor Reactive Sticker Group</title>
+
+<style>
+  * { box-sizing: border-box; }
+
+  html, body {
+    width: 100%;
+    min-height: 100%;
+    margin: 0;
+    background: transparent;
+  }
+
+  body {
+    display: grid;
+    place-items: center;
+    overflow: hidden;
+  }
+
+  .stage {
+    position: relative;
+    width: min(96vw, 1440px);
+    aspect-ratio: 16 / 10;
+    overflow: hidden;
+    background: #fff;
+    touch-action: none;
+    user-select: none;
+  }
+
+  .doodles {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 1;
+  }
+
+  /*
+    Filled mini "sticker cutouts".
+    Every silhouette is intentionally different:
+    stars, lightning, diamonds, leaves, tabs, zig-zags,
+    arrows, banners and angular blobs — no oval/circle shapes.
+  */
+  .shape {
+    stroke: rgba(255,255,255,.94);
+    stroke-width: 7;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    paint-order: stroke fill;
+    vector-effect: non-scaling-stroke;
+    filter: url(#grain);
+  }
+
+  .line {
+    fill: none;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    vector-effect: non-scaling-stroke;
+    filter: url(#grain);
+  }
+
+  .pink   { fill: #f5a2c7; }
+  .yellow { fill: #f5d366; }
+  .blue   { fill: #9bc9ea; }
+  .lilac  { fill: #c7b0ee; }
+  .green  { fill: #a7d5ad; }
+  .orange { fill: #f1aa70; }
+
+  .pinkLine   { stroke: #ed86b5; }
+  .yellowLine { stroke: #dfb73e; }
+  .blueLine   { stroke: #76add9; }
+  .lilacLine  { stroke: #9f83d8; }
+  .greenLine  { stroke: #75b380; }
+  .orangeLine { stroke: #da8550; }
+
+  .stickers {
+    position: absolute;
+    inset: 0;
+    z-index: 2;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    object-position: center;
+    pointer-events: none;
+    display: block;
+
+    /* Grain only affects the painted pixels of the people image. */
+    filter: url(#grain);
+  }
+
+  @media (max-width: 700px) {
+    .stage { width: 100vw; }
+    .shape { stroke-width: 5; }
+  }
+</style>
+</head>
+
+<body>
+<div class="stage" id="stage">
+
+  <!-- SVG filter used only on the sticker artwork and doodles -->
+  <svg width="0" height="0" aria-hidden="true" style="position:absolute">
+    <defs>
+      <filter id="grain"
+              x="-12%" y="-12%" width="124%" height="124%"
+              color-interpolation-filters="sRGB">
+        <feTurbulence
+          type="fractalNoise"
+          baseFrequency="0.95"
+          numOctaves="2"
+          seed="17"
+          stitchTiles="stitch"
+          result="noise" />
+
+        <feColorMatrix
+          in="noise"
+          type="saturate"
+          values="0"
+          result="grayNoise" />
+
+        <feComponentTransfer in="grayNoise" result="dots">
+          <feFuncR type="discrete" tableValues="0 0 0 0.07 0.12 0.17 0.22 0.28" />
+          <feFuncG type="discrete" tableValues="0 0 0 0.07 0.12 0.17 0.22 0.28" />
+          <feFuncB type="discrete" tableValues="0 0 0 0.07 0.12 0.17 0.22 0.28" />
+          <feFuncA type="discrete" tableValues="0 0.02 0.04 0.07 0.10 0.13 0.16 0.20" />
+        </feComponentTransfer>
+
+        <feComposite
+          in="dots"
+          in2="SourceGraphic"
+          operator="in"
+          result="clippedDots" />
+
+        <feBlend
+          in="SourceGraphic"
+          in2="clippedDots"
+          mode="multiply" />
+      </filter>
+    </defs>
+  </svg>
+
+  <!--
+    COLORFUL IMPERFECT MINI STICKERS
+    No oval/circle blobs. Shapes intentionally vary.
+  -->
+  <svg class="doodles" viewBox="0 0 1600 1000" aria-hidden="true">
+
+    <!-- LEFT PERSON -->
+
+    <!-- hand-drawn heart -->
+    <path class="shape pink"
+      transform="rotate(-8 108 185)"
+      d="M106 207
+         C98 196 76 181 82 165
+         C87 151 103 154 111 164
+         C119 150 136 153 140 166
+         C145 181 124 195 106 207 Z" />
+
+    <!-- crooked 4-point sparkle -->
+    <path class="shape yellow"
+      transform="rotate(7 350 252)"
+      d="M351 224
+         L359 244
+         L381 250
+         L361 257
+         L356 280
+         L347 260
+         L326 254
+         L345 246 Z" />
+
+    <!-- little lightning bolt -->
+    <path class="shape blue"
+      transform="rotate(-9 58 362)"
+      d="M65 335
+         L45 354
+         L55 357
+         L43 383
+         L72 355
+         L61 353 Z" />
+
+    <!-- angular flag/tab -->
+    <path class="shape lilac"
+      transform="rotate(11 445 464)"
+      d="M420 449
+         L446 441
+         L470 451
+         L463 470
+         L446 484
+         L428 474 Z" />
+
+    <!-- BETWEEN 1 + 2: wavy underline -->
+    <path class="line pinkLine"
+      d="M412 514
+         C426 503 440 502 451 508
+         C458 512 466 517 474 515"
+      stroke-width="5" />
+
+    <!-- PERSON 2 -->
+
+    <!-- asymmetric leaf -->
+    <path class="shape green"
+      transform="rotate(-17 578 169)"
+      d="M548 172
+         C557 153 581 143 604 151
+         C594 173 578 187 551 184
+         L541 178 Z" />
+
+    <!-- hand-drawn starburst -->
+    <path class="shape orange"
+      transform="rotate(5 699 177)"
+      d="M699 151
+         L706 166
+         L724 164
+         L712 178
+         L723 191
+         L705 188
+         L698 205
+         L691 188
+         L672 192
+         L684 178
+         L674 164
+         L692 167 Z" />
+
+    <!-- diamond-ish sticker -->
+    <path class="shape blue"
+      transform="rotate(15 774 344)"
+      d="M774 319
+         L799 340
+         L785 365
+         L756 359
+         L748 337 Z" />
+
+    <!-- tiny zig-zag strip -->
+    <path class="shape yellow"
+      transform="rotate(-9 520 752)"
+      d="M492 749
+         L506 739
+         L518 749
+         L530 740
+         L546 751
+         L530 761
+         L516 753
+         L503 763 Z" />
+
+    <!-- PERSON 3 -->
+
+    <!-- chunky irregular heart -->
+    <path class="shape pink"
+      transform="rotate(10 892 197)"
+      d="M890 218
+         C880 209 862 199 866 184
+         C870 171 884 170 895 181
+         C904 169 919 174 923 186
+         C927 200 909 212 890 218 Z" />
+
+    <!-- sideways lightning -->
+    <path class="shape yellow"
+      transform="rotate(-10 1241 294)"
+      d="M1218 286
+         L1238 272
+         L1234 288
+         L1260 283
+         L1243 299
+         L1248 314
+         L1228 302
+         L1230 292 Z" />
+
+    <!-- irregular 5-point-ish sparkle -->
+    <path class="shape lilac"
+      transform="rotate(12 1270 452)"
+      d="M1270 429
+         L1278 443
+         L1294 449
+         L1280 457
+         L1281 474
+         L1268 465
+         L1254 473
+         L1258 456
+         L1246 447
+         L1263 444 Z" />
+
+    <!-- open brush curve -->
+    <path class="line blueLine"
+      d="M869 705
+         C856 716 848 731 850 749
+         C851 758 855 766 861 772"
+      stroke-width="5" />
+
+    <!-- PERSON 4 -->
+
+    <!-- angular heart, not symmetrical -->
+    <path class="shape blue"
+      transform="rotate(-7 1415 178)"
+      d="M1411 205
+         C1397 197 1383 187 1389 173
+         C1394 162 1406 163 1417 174
+         C1425 162 1440 166 1444 177
+         C1448 191 1430 199 1411 205 Z" />
+
+    <!-- arrowhead/star hybrid -->
+    <path class="shape orange"
+      transform="rotate(15 1521 367)"
+      d="M1503 350
+         L1520 357
+         L1535 346
+         L1532 363
+         L1548 372
+         L1530 377
+         L1527 394
+         L1516 381
+         L1499 386
+         L1507 370 Z" />
+
+    <!-- irregular banner -->
+    <path class="shape green"
+      transform="rotate(-4 1348 772)"
+      d="M1324 763
+         L1354 757
+         L1375 767
+         L1367 788
+         L1340 793
+         L1321 782 Z" />
+
+    <!-- tiny detached angular accents -->
+    <path class="shape lilac"
+      d="M207 817 L222 809 L232 820 L225 834 L210 830 Z" />
+    <path class="shape yellow"
+      d="M1170 147 L1186 139 L1197 149 L1182 160 L1169 157 Z" />
+    <path class="shape pink"
+      d="M1202 154 L1218 145 L1228 153 L1220 166 L1205 164 Z" />
+    <path class="shape blue"
+      d="M1510 276 L1522 267 L1532 275 L1525 289 L1512 286 Z" />
+
+    <!-- a few non-circular tiny hand-drawn strokes -->
+    <path class="line greenLine" d="M94 805 l16 10 l12 -2" stroke-width="4" />
+    <path class="line lilacLine" d="M231 815 l12 6 l10 -5" stroke-width="3.5" />
+    <path class="line orangeLine" d="M1290 170 l12 -12 l14 3" stroke-width="4" />
+    <path class="line pinkLine" d="M1390 848 l19 8 l14 -3" stroke-width="4" />
+
+  </svg>
+
+  <!-- One complete four-person image for each pose -->
+  <img
+    id="stickers"
+    class="stickers"
+    src="assets/0%20down.png"
+    alt=""
+    draggable="false"
+  />
+</div>
+
+<script>
+  const stage = document.getElementById("stage");
+  const stickers = document.getElementById("stickers");
+
+  const poses = [
+    { file: "assets/0%20down.png",          vector: [ 0.00,  1.00] },
+    { file: "assets/30%20down%20right.png", vector: [ 0.80,  0.60] },
+    { file: "assets/80%20up%20right.png",   vector: [ 0.80, -0.60] },
+    { file: "assets/90%20up.png",           vector: [ 0.00, -1.00] },
+    { file: "assets/120%20up%20left.png",   vector: [-0.80, -0.60] },
+    { file: "assets/150%20down%20left.png", vector: [-0.80,  0.60] },
+    { file: "assets/170%20down%20left.png", vector: [-1.00,  0.00] }
+  ];
+
+  /* Preload every pose so switching is immediate and doesn't flicker. */
+  const loaded = poses.map((pose) => {
+    const img = new Image();
+    img.src = pose.file;
+    return img;
+  });
+
+  let current = 0;
+
+  function setPose(index) {
+    if (index === current) return;
+    current = index;
+    stickers.src = loaded[current].src;
+  }
+
+  function pickPose(clientX, clientY) {
+    const rect = stage.getBoundingClientRect();
+
+    const x = ((clientX - rect.left) / rect.width) * 2 - 1;
+    const y = ((clientY - rect.top) / rect.height) * 2 - 1;
+    const len = Math.hypot(x, y);
+
+    if (len < 0.10) return;
+
+    const dx = x / len;
+    const dy = y / len;
+
+    let bestIndex = current;
+    let bestScore = -Infinity;
+
+    poses.forEach((pose, i) => {
+      const [vx, vy] = pose.vector;
+      const score = dx * vx + dy * vy;
+
+      if (score > bestScore) {
+        bestScore = score;
+        bestIndex = i;
+      }
+    });
+
+    setPose(bestIndex);
+  }
+
+  stage.addEventListener("pointermove", e => {
+    pickPose(e.clientX, e.clientY);
+  });
+
+  stage.addEventListener("pointerenter", e => {
+    pickPose(e.clientX, e.clientY);
+  });
+
+  stage.addEventListener("pointerleave", () => {
+    setPose(0);
+  });
+</script>
+
+</body>
+</html>

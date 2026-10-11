@@ -1,0 +1,250 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap');
+@import 'tailwindcss';
+
+:root {
+  --background: #faf8f6;
+  --background-rgb: 250, 248, 246;
+  --foreground: #1c1917;
+  --foreground-rgb: 28, 25, 23;
+  --card: #ffffff;
+  --card-foreground: #1c1917;
+  --primary: #292524;
+  --primary-foreground: #faf8f6;
+  --secondary: #f5f5f4;
+  --secondary-foreground: #44403c;
+  --muted: #e7e5e4;
+  --muted-foreground: #57534e;
+  --accent: #292524;
+  --accent-foreground: #faf8f6;
+  --border: #e7e5e4;
+  --ring: #57534e;
+  --radiance-gold: #c59f60;
+  --gold: #c59f60;
+}
+
+.dark {
+  --background: #1c1917;
+  --background-rgb: 28, 25, 23;
+  --foreground: #faf8f6;
+  --foreground-rgb: 250, 248, 246;
+  --card: #292524;
+  --card-foreground: #faf8f6;
+  --primary: #faf8f6;
+  --primary-foreground: #1c1917;
+  --secondary: #292524;
+  --secondary-foreground: #a8a29e;
+  --muted: #44403c;
+  --muted-foreground: #d6d3d1;
+  --accent: #f5f5f4;
+  --accent-foreground: #1c1917;
+  --border: #44403c;
+  --ring: #d6d3d1;
+  --radiance-gold: #dfb273;
+  --gold: #dfb273;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-border: var(--border);
+  --color-ring: var(--ring);
+  --color-gold: var(--gold);
+  --font-display: 'Outfit', sans-serif;
+  --font-sans: 'Plus Jakarta Sans', sans-serif;
+  --font-mono: 'Outfit', monospace;
+  --font-cursive: cursive;
+  --animate-marquee: marquee var(--duration, 40s) linear infinite;
+  --animate-marquee-vertical: marquee-vertical var(--duration, 40s) linear infinite;
+}
+
+.glass-premium {
+  @apply backdrop-blur-md bg-[var(--background)]/80 dark:bg-black/60 border border-[var(--border)];
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+  background-blend-mode: overlay;
+  opacity: 1;
+}
+
+@keyframes marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(calc(-100% - var(--gap, 1rem)));
+  }
+}
+
+@keyframes marquee-vertical {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(calc(-100% - var(--gap, 1rem)));
+  }
+}
+
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--background);
+  color: var(--foreground);
+  font-family: 'DM Sans', sans-serif;
+  font-weight: 400;
+  letter-spacing: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+  transition: background-color 0.35s cubic-bezier(0.16, 1, 0.3, 1),
+              color 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Smooth transition on key surfaces for theme toggling */
+header, nav, footer, section {
+  transition: background-color 0.35s cubic-bezier(0.16, 1, 0.3, 1),
+              color 0.35s cubic-bezier(0.16, 1, 0.3, 1),
+              border-color 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* View Transition API */
+::view-transition-old(root),
+::view-transition-new(root) {
+  animation-duration: 0.35s;
+  animation-timing-function: cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+*, ::before, ::after {
+  letter-spacing: 0;
+}
+
+/* Scrollbar */
+* { scrollbar-width: thin; scrollbar-color: var(--border) transparent; }
+::-webkit-scrollbar { width: 4px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background-color: var(--border); border-radius: 2px; }
+
+/* Reveal */
+.reveal {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1),
+              transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.reveal.visible { opacity: 1; transform: none; }
+.reveal.delay-100 { transition-delay: 0.1s; }
+.reveal.delay-200 { transition-delay: 0.2s; }
+.reveal.delay-300 { transition-delay: 0.3s; }
+.reveal.delay-400 { transition-delay: 0.4s; }
+
+@media (prefers-reduced-motion: reduce) {
+  .reveal { opacity: 1; transform: none; transition: none; }
+}
+
+/* Focus */
+:focus-visible { outline: 2px solid var(--ring); outline-offset: 3px; }
+
+/* Selection */
+::selection { background: var(--primary); color: var(--primary-foreground); }
+
+/* Page transition */
+.page-enter { opacity: 0; transform: translateY(12px); }
+.page-enter-active {
+  opacity: 1; transform: none;
+  transition: opacity 0.45s cubic-bezier(0.16, 1, 0.3, 1),
+              transform 0.45s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .page-enter, .page-enter-active { opacity: 1; transform: none; transition: none; }
+}
+
+/* Googly Characters Floating Animations */
+.deco-wrap {
+  transform-box: fill-box;
+  transform-origin: center;
+  will-change: transform;
+}
+
+.float {
+  transform-box: fill-box;
+  transform-origin: center;
+  will-change: transform;
+}
+
+.float-a { animation: driftA 5.8s ease-in-out infinite; }
+.float-b { animation: driftB 6.7s ease-in-out infinite; }
+.float-c { animation: driftC 5.3s ease-in-out infinite; }
+.float-d { animation: driftD 6.2s ease-in-out infinite; }
+.float-e { animation: driftE 7.4s ease-in-out infinite; }
+.float-f { animation: driftF 5.9s ease-in-out infinite; }
+.float-g { animation: driftG 6.8s ease-in-out infinite; }
+.float-h { animation: driftH 5.7s ease-in-out infinite; }
+.float-i { animation: driftI 6.3s ease-in-out infinite; }
+.float-j { animation: driftJ 6.0s ease-in-out infinite; }
+.float-k { animation: driftK 7.0s ease-in-out infinite; }
+.float-l { animation: driftL 6.5s ease-in-out infinite; }
+
+@keyframes driftA {
+  0%, 100% { transform: translate(0, 0) rotate(-3deg); }
+  50% { transform: translate(0, -8px) rotate(3deg); }
+}
+@keyframes driftB {
+  0%, 100% { transform: translate(0, 0) rotate(0deg); }
+  50% { transform: translate(4px, 7px) rotate(5deg); }
+}
+@keyframes driftC {
+  0%, 100% { transform: translate(0, 0) rotate(-2deg); }
+  50% { transform: translate(-7px, 4px) rotate(4deg); }
+}
+@keyframes driftD {
+  0%, 100% { transform: translate(0, 0); }
+  50% { transform: translate(6px, -6px); }
+}
+@keyframes driftE {
+  0%, 100% { transform: translate(0, 0); }
+  50% { transform: translate(-5px, 8px); }
+}
+@keyframes driftF {
+  0%, 100% { transform: translate(0, 0) rotate(0); }
+  50% { transform: translate(5px, -7px) rotate(4deg); }
+}
+@keyframes driftG {
+  0%, 100% { transform: translate(0, 0) rotate(0); }
+  50% { transform: translate(-4px, 7px) rotate(-5deg); }
+}
+@keyframes driftH {
+  0%, 100% { transform: translate(0, 0); }
+  50% { transform: translate(7px, -5px); }
+}
+@keyframes driftI {
+  0%, 100% { transform: translate(0, 0); }
+  50% { transform: translate(-4px, 5px); }
+}
+@keyframes driftJ {
+  0%, 100% { transform: translate(0, 0); }
+  50% { transform: translate(4px, -5px); }
+}
+@keyframes driftK {
+  0%, 100% { transform: translate(0, 0); }
+  50% { transform: translate(-6px, -3px); }
+}
+@keyframes driftL {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  50% { transform: translate(3px, 5px) scale(1.03); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .float { animation: none !important; }
+}
+

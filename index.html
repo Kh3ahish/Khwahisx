@@ -1,0 +1,480 @@
+<!doctype html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script>
+      (function() {
+        try {
+          var saved = localStorage.getItem('khwahish-theme');
+          var isDark = saved === 'dark';
+          if (isDark) {
+            document.documentElement.classList.add('dark');
+          } else {
+            document.documentElement.classList.remove('dark');
+          }
+        } catch (e) {}
+      })();
+    </script>
+    <!-- Pre-fetch hero characters -->
+  <link rel="preload" href="/cursor-assets/0 down.webp" as="image" type="image/webp" />
+  <link rel="preload" href="/cursor-assets/30 down right.webp" as="image" type="image/webp" />
+  <link rel="preload" href="/cursor-assets/80 up right.webp" as="image" type="image/webp" />
+  <link rel="preload" href="/cursor-assets/90 up.webp" as="image" type="image/webp" />
+  <link rel="preload" href="/cursor-assets/120 up left.webp" as="image" type="image/webp" />
+  <link rel="preload" href="/cursor-assets/150 down left.webp" as="image" type="image/webp" />
+  <link rel="preload" href="/cursor-assets/170 down left.webp" as="image" type="image/webp" />
+
+  <title>Khwahish Kushwah | Product Designer & UX Engineer — Berlin</title>
+    <meta name="description" content="Khwahish Kushwah is a Berlin-based Product Designer and UX Engineer bridging behavioral research, accessible design systems (WCAG 2.2 AA), and frontend engineering in React & TypeScript." />
+    <meta name="author" content="Khwahish Kushwah" />
+    <meta name="keywords" content="Khwahish Kushwah, Product Designer, UX Engineer, UX Designer, UI/UX Designer, UX Researcher, Interaction Design, Design Systems, Frontend Development, React, TypeScript, Berlin UX Designer, Behavioral Research, Human-Computer Interaction, AI UX Design" />
+    
+    <!-- Preload Desktop Hero Person Cursor Effect Assets with high priority for PC -->
+    <link rel="preload" as="image" href="/cursor-assets/0 down.webp" type="image/webp" fetchpriority="high" media="(min-width: 768px)" />
+    <link rel="preload" as="image" href="/cursor-assets/30 down right.webp" type="image/webp" media="(min-width: 768px)" />
+    <link rel="preload" as="image" href="/cursor-assets/80 up right.webp" type="image/webp" media="(min-width: 768px)" />
+    <link rel="preload" as="image" href="/cursor-assets/90 up.webp" type="image/webp" media="(min-width: 768px)" />
+    <link rel="preload" as="image" href="/cursor-assets/120 up left.webp" type="image/webp" media="(min-width: 768px)" />
+    <link rel="preload" as="image" href="/cursor-assets/150 down left.webp" type="image/webp" media="(min-width: 768px)" />
+    <link rel="preload" as="image" href="/cursor-assets/170 down left.webp" type="image/webp" media="(min-width: 768px)" />
+
+    <!-- Hreflang Tags -->
+    <link rel="alternate" hreflang="en" href="https://khwahix.com/" />
+    <link rel="alternate" hreflang="de" href="https://khwahix.com/" />
+    <link rel="alternate" hreflang="it" href="https://khwahix.com/" />
+    <link rel="alternate" hreflang="x-default" href="https://khwahix.com/" />
+    <link rel="canonical" href="https://khwahix.com/" />
+
+    <!-- OpenGraph Social Cards -->
+    <meta property="og:title" content="Khwahish Kushwah | Product Designer & UX Engineer — Berlin" />
+    <meta property="og:description" content="Berlin-based Product Designer and UX Engineer bridging behavioral research, accessible design systems (WCAG 2.2 AA), and frontend engineering in React & TypeScript." />
+    <meta property="og:type" content="profile" />
+    <meta property="og:url" content="https://khwahix.com/" />
+    <meta property="og:site_name" content="Khwahish Kushwah Portfolio" />
+    <meta property="og:image" content="https://khwahix.com/kk-black-logo.png" />
+    <meta property="og:image:alt" content="Khwahish Kushwah - Product Designer & UX Engineer" />
+
+    <!-- Twitter / X Cards -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Khwahish Kushwah | Product Designer & UX Engineer — Berlin" />
+    <meta name="twitter:description" content="Berlin-based Product Designer and UX Engineer bridging behavioral research, accessible design systems (WCAG 2.2 AA), and frontend engineering in React & TypeScript." />
+    <meta name="twitter:image" content="https://khwahix.com/kk-black-logo.png" />
+    <meta name="twitter:site" content="@khwahix" />
+    <meta name="twitter:creator" content="@khwahix" />
+
+    <!-- Schema.org Structured Data (JSON-LD) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "WebSite",
+          "@id": "https://khwahix.com/#website",
+          "url": "https://khwahix.com/",
+          "name": "Khwahish Kushwah Portfolio",
+          "description": "Portfolio of Khwahish Kushwah — Product Designer, UX Engineer, and Behavioral Researcher based in Berlin.",
+          "publisher": {
+            "@id": "https://khwahix.com/#person"
+          },
+          "inLanguage": ["en", "de"]
+        },
+        {
+          "@type": "ProfilePage",
+          "@id": "https://khwahix.com/#profile",
+          "url": "https://khwahix.com/",
+          "name": "Khwahish Kushwah | Product Designer & UX Engineer Profile",
+          "isPartOf": {
+            "@id": "https://khwahix.com/#website"
+          },
+          "mainEntity": {
+            "@id": "https://khwahix.com/#person"
+          }
+        },
+        {
+          "@type": "Person",
+          "@id": "https://khwahix.com/#person",
+          "name": "Khwahish Kushwah",
+          "alternateName": [
+            "Khwahish Kushwaha",
+            "Kwahish Kushwah",
+            "Khwaish Kushwah",
+            "Khwahis Kushwah",
+            "Khwahish Kuswah",
+            "Khwahix"
+          ],
+          "url": "https://khwahix.com/",
+          "image": "https://khwahix.com/about-portrait.jpeg",
+          "jobTitle": [
+            "Product Designer",
+            "UX Engineer",
+            "UX Designer",
+            "UI/UX Designer",
+            "User Researcher",
+            "Design Technologist"
+          ],
+          "description": "Berlin-based Product Designer and UX Engineer bridging behavioral research, interaction architecture, design systems, and frontend engineering in React & TypeScript with AI workflow integration.",
+          "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Berlin",
+            "addressCountry": "DE"
+          },
+          "worksFor": {
+            "@type": "Organization",
+            "name": "SwavishTek"
+          },
+          "alumniOf": [
+            {
+              "@type": "CollegeOrUniversity",
+              "name": "University of Europe for Applied Sciences (UE)",
+              "location": "Berlin, Germany"
+            },
+            {
+              "@type": "CollegeOrUniversity",
+              "name": "Glasgow Caledonian University",
+              "location": "Glasgow, Scotland"
+            },
+            {
+              "@type": "EducationalOrganization",
+              "name": "UX Design Institute",
+              "location": "Dublin, Ireland"
+            },
+            {
+              "@type": "CollegeOrUniversity",
+              "name": "IU International University of Applied Sciences",
+              "location": "Erfurt / Berlin, Germany"
+            }
+          ],
+          "hasCredential": [
+            {
+              "@type": "EducationalOccupationalCredential",
+              "name": "Professional Diploma in UX Design",
+              "credentialCategory": "degree",
+              "recognizedBy": {
+                "@type": "CollegeOrUniversity",
+                "name": "Glasgow Caledonian University"
+              },
+              "url": "https://www.credential.net/c06fc35b-a005-4e19-9e05-37ea4fe79a1b#acc.goGlCMst"
+            },
+            {
+              "@type": "EducationalOccupationalCredential",
+              "name": "Generative AI for UI UX Design",
+              "recognizedBy": {
+                "@type": "Organization",
+                "name": "IBM"
+              },
+              "url": "https://www.coursera.org/account/accomplishments/specialization/BZXBT32G6ARO"
+            },
+            {
+              "@type": "EducationalOccupationalCredential",
+              "name": "Prompt Engineering Specialization",
+              "recognizedBy": {
+                "@type": "CollegeOrUniversity",
+                "name": "Vanderbilt University"
+              },
+              "url": "https://www.coursera.org/account/accomplishments/specialization/RCPDCKPWPEQF"
+            },
+            {
+              "@type": "EducationalOccupationalCredential",
+              "name": "Psychological Research Specialization",
+              "recognizedBy": {
+                "@type": "Organization",
+                "name": "American Psychological Association"
+              },
+              "url": "https://www.coursera.org/account/accomplishments/specialization/D6VUC073UTX1"
+            },
+            {
+              "@type": "EducationalOccupationalCredential",
+              "name": "Google UX Design Professional Certificate",
+              "recognizedBy": {
+                "@type": "Organization",
+                "name": "Google"
+              },
+              "url": "https://www.coursera.org/account/accomplishments/professional-cert/Q16STMMEA6NI"
+            },
+            {
+              "@type": "EducationalOccupationalCredential",
+              "name": "Getting Started with Web Development",
+              "recognizedBy": {
+                "@type": "Organization",
+                "name": "SAP"
+              },
+              "url": "https://www.credly.com/badges/6932e140-1c63-40c8-8a59-035f7c1bafa1"
+            }
+          ],
+          "knowsAbout": [
+            "User Experience Design (UX)",
+            "User Interface Design (UI)",
+            "Product Design",
+            "UX Research & Usability Testing",
+            "Design Systems & Token Architecture",
+            "Frontend Engineering (React, TypeScript, HTML5, CSS3, Tailwind CSS)",
+            "Human-Computer Interaction (HCI)",
+            "Cognitive Psychology & Behavioral Science",
+            "Generative AI & Prompt Engineering for Design Workflows",
+            "Information Architecture & User Journey Mapping",
+            "Web Accessibility (WCAG 2.2 AA)",
+            "Interactive Prototyping & Motion Design"
+          ],
+          "sameAs": [
+            "https://www.linkedin.com/in/kushwahkhwahish/",
+            "https://www.instagram.com/khwahix/",
+            "https://credential.net/profile/khwahishkushwah",
+            "https://www.coursera.org/user/khwahish-kushwah",
+            "https://www.credly.com/badges/6932e140-1c63-40c8-8a59-035f7c1bafa1"
+          ]
+        },
+        {
+          "@type": "ItemList",
+          "@id": "https://khwahix.com/#portfolio-projects",
+          "name": "Selected Product Design & UX Case Studies",
+          "description": "Featured UX/UI, Product Design, and Frontend engineering projects by Khwahish Kushwah.",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "item": {
+                "@type": "CreativeWork",
+                "@id": "https://khwahix.com/projects/zellix-the-all-in-one-crm-hrms-app",
+                "name": "Zellix - The All-in-One CRM & HRMS App",
+                "description": "A unified mobile ecosystem to manage property leads, team operations, and payroll in one place.",
+                "genre": "Fintech / CRM",
+                "creator": { "@id": "https://khwahix.com/#person" },
+                "url": "https://khwahix.com/projects/zellix-the-all-in-one-crm-hrms-app",
+                "image": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjgOcPLDyRvNqcrvpJ1S4m-WxmCM8pXRRqbzS38bzVf1LRK8LXTfGUC1O4q2GduR-7vmWh8IkUXoG1KQR_NsX7eY1vuzZERqkb-ZXJiLlDiLAe32vlAag9QLJMtPRFQjjbT1z4J5tHIrHp63MGVm2zIg-rs4I2raUWUgB8qo2jr3hm1mekdx9BbdrEbEfY/s2560/1.png"
+              }
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "item": {
+                "@type": "CreativeWork",
+                "@id": "https://khwahix.com/projects/kirchekeep-a-german-church-support-platform",
+                "name": "KircheKeep - A German Church Support Platform",
+                "description": "A unified digital platform for church donations, tax payments, and volunteering in Germany.",
+                "genre": "Philanthropy / Civic Tech",
+                "creator": { "@id": "https://khwahix.com/#person" },
+                "url": "https://khwahix.com/projects/kirchekeep-a-german-church-support-platform",
+                "image": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhaGQA6qpeNTJvDqdNGgqqkLCB_aG-zX99g-5rjYk5bIfvHBOAYzHIGwv60OQjkFPhb3hJ2ghoKGCDqiGlu8D3HaVDRL-07Pesslgs4nGz1MLqU3dy_82qjY79e8_hPTpBV1JwimFKfrfZM0isCfTcQNWotUuanqVC2CNybRvo9O26CLnGgsDbL3sHyztE/s2560/1.png"
+              }
+            },
+            {
+              "@type": "ListItem",
+              "position": 3,
+              "item": {
+                "@type": "CreativeWork",
+                "@id": "https://khwahix.com/projects/dashly-social-manager",
+                "name": "Dashly : Social Manager",
+                "description": "Centralized multi-platform social media dashboard for video consumption and content scheduling.",
+                "genre": "SaaS / Management",
+                "creator": { "@id": "https://khwahix.com/#person" },
+                "url": "https://khwahix.com/projects/dashly-social-manager",
+                "image": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhQk2U6EBjsW0RxQsSPZUVTjltGnFlbJm3U7_uQgr8jF-OOD9Elg3wiYVCwW_z1RTQiktIms_A5Xpj9YcfxoVexiZx1ywt9oZNNtWagGLS8o1kBAvfg66zDGwk_GuAAquns7feOqcpeuzcVNzC5zwh90l3UVcNUrAf4j9mXrktXDWuFuL4k2gERXJvpZZg/s2560/Manage%20all%20your%20social%20media%20in%20one%20place%20(2).png"
+              }
+            },
+            {
+              "@type": "ListItem",
+              "position": 4,
+              "item": {
+                "@type": "CreativeWork",
+                "@id": "https://khwahix.com/projects/learnado",
+                "name": "Learnado",
+                "description": "Comprehensive learning platform with structured course roadmaps and distraction-free study views.",
+                "genre": "EdTech",
+                "creator": { "@id": "https://khwahix.com/#person" },
+                "url": "https://khwahix.com/projects/learnado",
+                "image": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiJBEXsEkwP7ivoAF72Y5xWNsW_slx3NqES7RU0BGmJL0qMzkkA38b4aFzhyozCnjiKjd1KriD_lWqAYRUvg1M0NQm1GUSYXGk33du9In39Imbaor9IM5DUAX_MBcF8vqxOuCDO9KHC8hjMyBwokdKcz7JlYaAYWAWLb4PScbU7RnsxHCMlmNkdOcknFpM/s2560/Screenshot%202026-04-12%20at%2016.31.30.jpg"
+              }
+            },
+            {
+              "@type": "ListItem",
+              "position": 5,
+              "item": {
+                "@type": "CreativeWork",
+                "@id": "https://khwahix.com/projects/flyza-airline-booking-website",
+                "name": "Flyza : Airline Booking Website",
+                "description": "Airline booking and reservation platform engineered for transparent pricing and stress-free passenger checkout.",
+                "genre": "Travel / E-Commerce",
+                "creator": { "@id": "https://khwahix.com/#person" },
+                "url": "https://khwahix.com/projects/flyza-airline-booking-website",
+                "image": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEj9q1OUsUUbOckawEZek5w9w_Z3Hmko5l6dnlnag-U2og_zdz1iNiDlUujPCEOEiMy8wVkqlknZsacmx3EYMBn1p-ULLkAqH0-QvvrCQ36A_d9firodK_R2A1h5ZIlTW6Ij6BWaKm3WiqSYY7KDb6YoC2zRfGHGsosMOEWiGjMWuX9YSOc_9Zq9KVmxHz4/s2560/Khwahish%20Kushwah%20(2).png"
+              }
+            },
+            {
+              "@type": "ListItem",
+              "position": 6,
+              "item": {
+                "@type": "CreativeWork",
+                "@id": "https://khwahix.com/projects/travel-nest-booking-app",
+                "name": "Travel Nest : Booking App",
+                "description": "All-in-one flight and hotel reservation mobile application with synchronized itinerary tracking.",
+                "genre": "Travel / Mobile",
+                "creator": { "@id": "https://khwahix.com/#person" },
+                "url": "https://khwahix.com/projects/travel-nest-booking-app",
+                "image": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhPNwzDhzGqpi2-Pjf36gMVGwJoM8cC8K8w46c6jFoFIhplYns5AzclJ0ytTiuOK8U-DzBMd6kXB3ATmrtswBgu_2clewBE1opIBSnQZzQy7-wbOmM0uPL6jxurY5qFeM5gY2daS_m028Vlep4rFVAqXcjWAwTFmVZwdLB_6khcuk0hf6TKbNKCdr_K25w/s2560/Manage%20all%20your%20social%20media%20in%20one%20place%20(1).png"
+              }
+            },
+            {
+              "@type": "ListItem",
+              "position": 7,
+              "item": {
+                "@type": "CreativeWork",
+                "@id": "https://khwahix.com/projects/boat",
+                "name": "boAt Audio",
+                "description": "Tactile companion app interface with intuitive soundstage tuning and device switching.",
+                "genre": "Consumer Audio / IoT",
+                "creator": { "@id": "https://khwahix.com/#person" },
+                "url": "https://khwahix.com/projects/boat"
+              }
+            },
+            {
+              "@type": "ListItem",
+              "position": 8,
+              "item": {
+                "@type": "CreativeWork",
+                "@id": "https://khwahix.com/projects/bank-app",
+                "name": "NeoBank Mobile",
+                "description": "Modern digital banking experience with one-tap peer transfers and visual spending analytics.",
+                "genre": "Fintech / Banking",
+                "creator": { "@id": "https://khwahix.com/#person" },
+                "url": "https://khwahix.com/projects/bank-app"
+              }
+            },
+            {
+              "@type": "ListItem",
+              "position": 9,
+              "item": {
+                "@type": "CreativeWork",
+                "@id": "https://khwahix.com/projects/housing-app",
+                "name": "Housing App",
+                "description": "Exploratory property search experience with contextual map overlays and neighborhood insights.",
+                "genre": "Real Estate / Mobile Discovery",
+                "creator": { "@id": "https://khwahix.com/#person" },
+                "url": "https://khwahix.com/projects/housing-app"
+              }
+            },
+            {
+              "@type": "ListItem",
+              "position": 10,
+              "item": {
+                "@type": "CreativeWork",
+                "@id": "https://khwahix.com/projects/melox",
+                "name": "Melox Music",
+                "description": "Circadian-aware audio player focusing on mood-based sonic discovery and fluid gestural volume control.",
+                "genre": "Entertainment / Streaming",
+                "creator": { "@id": "https://khwahix.com/#person" },
+                "url": "https://khwahix.com/projects/melox"
+              }
+            },
+            {
+              "@type": "ListItem",
+              "position": 11,
+              "item": {
+                "@type": "CreativeWork",
+                "@id": "https://khwahix.com/projects/zellix-pc",
+                "name": "Zellix Web Portal",
+                "description": "Institutional property investor dashboard providing modular pipeline analytics and transaction reporting.",
+                "genre": "Fintech / Enterprise SaaS",
+                "creator": { "@id": "https://khwahix.com/#person" },
+                "url": "https://khwahix.com/projects/zellix-pc"
+              }
+            },
+            {
+              "@type": "ListItem",
+              "position": 12,
+              "item": {
+                "@type": "CreativeWork",
+                "@id": "https://khwahix.com/projects/housing-pc",
+                "name": "Housing Platform",
+                "description": "Dual-pane desktop web system enabling side-by-side floor plan inspection and mortgage estimation.",
+                "genre": "Real Estate / Web Platform",
+                "creator": { "@id": "https://khwahix.com/#person" },
+                "url": "https://khwahix.com/projects/housing-pc"
+              }
+            }
+          ]
+        }
+      ]
+    }
+    </script>
+
+    <!-- Resource Preloading -->
+    <link rel="preload" as="image" href="/kk-black-logo.png" />
+    
+    <link rel="icon" type="image/png" href="/kk-black-logo.png" />
+    <link rel="apple-touch-icon" href="/kk-black-logo.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  </head>
+  <body class="bg-neutral-50 dark:bg-neutral-950 text-neutral-900 dark:text-neutral-100 antialiased selection:bg-neutral-900 selection:text-white dark:selection:bg-neutral-100 dark:selection:text-neutral-900 transition-colors duration-300">
+    <!-- Noscript & Crawler Rich Text Body Copy -->
+    <noscript>
+      <nav>
+        <ul>
+          <li><a href="/">Home</a></li>
+          <li><a href="/about">About Khwahish Kushwah</a></li>
+          <li><a href="/projects">UX/UI Portfolio Projects</a></li>
+          <li><a href="/projects/zellix-the-all-in-one-crm-hrms-app">Zellix - CRM & HRMS Ecosystem Case Study</a></li>
+          <li><a href="/projects/kirchekeep-a-german-church-support-platform">KircheKeep - German Church Support Platform Case Study</a></li>
+          <li><a href="/projects/dashly-social-manager">Dashly - Social Media Manager Case Study</a></li>
+          <li><a href="/projects/learnado">Learnado - EdTech Learning Platform Case Study</a></li>
+          <li><a href="/projects/flyza-airline-booking-website">Flyza - Airline Booking Case Study</a></li>
+          <li><a href="/projects/travel-nest-booking-app">Travel Nest - Integrated Travel Booking App Case Study</a></li>
+          <li><a href="/projects/boat">boAt Audio - IoT & Audio Experience Case Study</a></li>
+          <li><a href="/projects/bank-app">NeoBank Mobile - Digital Banking Case Study</a></li>
+          <li><a href="/projects/housing-app">Housing App - Real Estate Mobile Discovery Case Study</a></li>
+          <li><a href="/projects/melox">Melox Music - Circadian Streaming Audio Case Study</a></li>
+          <li><a href="/projects/zellix-pc">Zellix Web Portal - Institutional Dashboard Case Study</a></li>
+          <li><a href="/projects/housing-pc">Housing Platform - Desktop Real Estate Case Study</a></li>
+          <li><a href="https://www.linkedin.com/in/kushwahkhwahish/">LinkedIn Profile</a></li>
+        </ul>
+      </nav>
+      <main>
+        <h1>Khwahish Kushwah — Product Designer, UX Engineer & User Researcher</h1>
+        <p>Berlin-based Product Designer and UX Engineer bridging behavioral research, accessible design systems (WCAG 2.2 AA), and frontend engineering in React and TypeScript. Specializing in cognitive interaction architecture, usability testing, and AI-assisted design workflows.</p>
+        
+        <h2>Featured Product Design & UX Case Studies</h2>
+        <ul>
+          <li><strong>Zellix: All-in-One CRM & HRMS Ecosystem</strong> (Fintech mobile application uniting property leads, team scheduling, and automated payroll)</li>
+          <li><strong>KircheKeep: German Church Support Platform</strong> (Compliant, WCAG 2.2 AA accessible web portal for donations, tax payments, and volunteer coordination)</li>
+          <li><strong>Dashly: Social Media Manager</strong> (Centralized multi-channel dashboard for video consumption and content scheduling)</li>
+          <li><strong>Learnado: Comprehensive Learning Ecosystem</strong> (Cognitive flow-designed online education platform with modular course roadmaps)</li>
+          <li><strong>Flyza: Airline Booking & Reservation Platform</strong> (Transparent, stress-free flight reservation funnel with modular seat selection)</li>
+          <li><strong>Travel Nest: Integrated Travel & Booking Application</strong> (All-in-one flight and hotel reservation mobile application)</li>
+          <li><strong>boAt Audio</strong> (Tactile companion app interface with intuitive soundstage tuning and device switching)</li>
+          <li><strong>NeoBank Mobile</strong> (Modern digital banking experience with one-tap peer transfers and visual spending analytics)</li>
+          <li><strong>Housing App</strong> (Exploratory property search experience with contextual map overlays and neighborhood insights)</li>
+          <li><strong>Melox Music</strong> (Circadian-aware audio player focusing on mood-based sonic discovery)</li>
+          <li><strong>Zellix Web Portal</strong> (Institutional property investor dashboard providing modular pipeline analytics)</li>
+          <li><strong>Housing Platform</strong> (Dual-pane desktop web system enabling side-by-side floor plan inspection and mortgage estimation)</li>
+        </ul>
+
+        <h2>Work Experience</h2>
+        <ul>
+          <li><strong>SwavishTek</strong> — UX Designer & Developer (Mid Level) (2025 – Present) | Enterprise SaaS UX strategy, design systems, and React frontend development</li>
+          <li><strong>SwavishTek</strong> — UX Designer & Developer (2024 – 2025) | Responsive interfaces, user interviews, component libraries</li>
+          <li><strong>CodSoft</strong> — UI/UX Designer (2024) | User flows, wireframes, and prototypes</li>
+          <li><strong>Kreativstorm</strong> — UI/UX Designer (2024, Berlin) | UX research reports, user journeys, interface design</li>
+        </ul>
+
+        <h2>Academic Background & Accredited Credentials</h2>
+        <ul>
+          <li><strong>University of Europe for Applied Sciences (UE), Germany</strong> — B.A. in Communication Design & Foundation Diploma in Art & Design (88.25%)</li>
+          <li><strong>UX Design Institute / Glasgow Caledonian University, Ireland</strong> — Professional Diploma in UX Design (84%, 30 SCQF credits at Level 8)</li>
+          <li><strong>IU International University of Applied Sciences, Germany</strong> — Computer Science Coursework (Web Application Development, Java & Web Development)</li>
+          <li><strong>IBM / SkillUp</strong> — Generative AI for UI UX Design Specialization</li>
+          <li><strong>Vanderbilt University</strong> — Prompt Engineering Specialization</li>
+          <li><strong>American Psychological Association</strong> — Psychological Research Specialization</li>
+          <li><strong>Google</strong> — Google UX Design Professional Certificate</li>
+          <li><strong>SAP</strong> — Getting Started with Web Development</li>
+        </ul>
+      </main>
+    </noscript>
+    <div id="root"></div>
+    <div id="site-header-root"></div>
+    <div id="mobile-header-root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>

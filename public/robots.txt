@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+Disallow: /kk7
+
+Sitemap: https://khwahix.com/sitemap.xml
