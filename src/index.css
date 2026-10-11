@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600&display=swap');
 @import 'tailwindcss';
 
 :root {
@@ -59,9 +59,9 @@
   --color-border: var(--border);
   --color-ring: var(--ring);
   --color-gold: var(--gold);
-  --font-display: 'Outfit', sans-serif;
-  --font-sans: 'Plus Jakarta Sans', sans-serif;
-  --font-mono: 'Outfit', monospace;
+  --font-display: 'Space Grotesk', sans-serif;
+  --font-sans: 'DM Sans', sans-serif;
+  --font-mono: 'Space Grotesk', monospace;
   --font-cursive: cursive;
   --animate-marquee: marquee var(--duration, 40s) linear infinite;
   --animate-marquee-vertical: marquee-vertical var(--duration, 40s) linear infinite;
